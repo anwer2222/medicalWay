@@ -1,4 +1,4 @@
-# Django website for midicWay
+# Django website for medicWay
 Website for a handy medical services.
 
 ## Setting up the local server for this project (in a development mode):
