@@ -1419,7 +1419,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 }
 
 .slicknav_open .slicknav_icon {
-    background: url(/_layouts/15/MOH/Internet/New/images/close_menu.png) no-repeat center center;
+#
     width: 40px;
     height: 23px;
     display: inline-block;
@@ -2345,7 +2345,7 @@ input: -moz-placeholder {
     }
 
 .services[data-tabIndex="0"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_01.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -2353,7 +2353,7 @@ input: -moz-placeholder {
 }
 
 .services[data-tabIndex="1"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_02.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -2361,7 +2361,7 @@ input: -moz-placeholder {
 }
 
 .services[data-tabIndex="2"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_03.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -2369,7 +2369,7 @@ input: -moz-placeholder {
 }
 
 .services[data-tabIndex="3"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_04.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -2894,7 +2894,7 @@ input: -moz-placeholder {
 .s4-breadcrumb-arrowcont {
     width: 9px;
     height: 25px;
-    background: url(/_layouts/15/MOH/Internet/New/images/bc_arrow.png) no-repeat center center;
+#
     position: relative;
     display: inline-block;
     bottom: 0;
@@ -3068,7 +3068,7 @@ input: -moz-placeholder {
 .sm_conts {
     padding: 10px;
     border: 1px solid #ddd;
-    background: url(/_layouts/15/MOH/Internet/New/images/mc_bg.png) #fff no-repeat bottom left;
+#
     border-radius: 10px;
     background-size: auto 70%;
 }
@@ -3868,7 +3868,7 @@ input: -moz-placeholder {
     position: absolute;
     bottom: 5px;
     left: 50%;
-    background: url(/_layouts/15/MOH/Internet/New/images/nal_c.png) no-repeat;
+#
     width: 32px;
     height: 32px;
     text-indent: -9999px;
@@ -3880,7 +3880,7 @@ input: -moz-placeholder {
     position: absolute;
     bottom: 5px;
     right: 50%;
-    background: url(/_layouts/15/MOH/Internet/New/images/nar_c.png) no-repeat;
+#
     width: 32px;
     height: 32px;
     text-indent: -9999px;
@@ -4411,7 +4411,7 @@ input: -moz-placeholder {
     height: 22px;
     margin: 0 0px 0 0;
     cursor: pointer;
-    background: url(/_layouts/15/MOH/Internet/New/images/fb_star_01.png) no-repeat;
+#
     margin-right: 5px;
     display: inline-block;
 }
@@ -4421,7 +4421,7 @@ input: -moz-placeholder {
     height: 22px;
     margin: 0 0px 0 0;
     cursor: pointer;
-    background: url(/_layouts/15/MOH/Internet/New/images/fb_star_02.png) no-repeat;
+#
     margin-right: 5px;
     display: inline-block;
 }
@@ -4431,7 +4431,7 @@ input: -moz-placeholder {
     height: 22px;
     margin: 0 0px 0 0;
     cursor: pointer;
-    background: url(/_layouts/15/MOH/Internet/New/images/fb_star_02.png) no-repeat;
+#
     margin-right: 5px;
     display: inline-block;
 }
@@ -5009,7 +5009,7 @@ td.ms-advsrchText-v1 {
     .loader > div {
         width: 195px;
         height: 125px;
-        background: url(/_layouts/15/MOH/Internet/New/images/moh_loader.png) no-repeat;
+#
         margin: 40px auto;
         position: absolute;
         top: 0;
@@ -6027,14 +6027,14 @@ ul.newProj {
     }
 
     .boxCommentA .headerComment {
-        background-image: url(/_layouts/15/MOH/Internet/New/images/cerical.png);
+#
         background-repeat: no-repeat;
         padding-right: 50px;
         background-position: right;
     }
 
     .boxCommentA .footerrComment {
-        background-image: url(/_layouts/15/MOH/Internet/New/images/moh.png);
+#
         background-repeat: no-repeat;
         padding-right: 50px;
         margin-top: 8px;
@@ -6215,7 +6215,7 @@ ul.newProj {
 /*Search Box Modification End Here */
 /* Statistics in home page */
 .sectionStatistics {
-    background-image: url(/_layouts/15/MOH/Internet/New/images/bgStatistics.png);
+#
     background-position: center center;
     background-repeat: no-repeat;
     min-height: 400px;
@@ -6545,7 +6545,7 @@ ul.sideMenuPickList li a img {
     box-shadow: -5px 0 11px -3px #c9c9c9;
     */
         display: block;
-        content: url(/en/eServices/PublishingImages/lifehelpextention.png);
+#
         position: absolute;
         /* transform: scale(0.29);
     */
@@ -7802,14 +7802,14 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 }
 
 .slicknav_open .slicknav_icon {
-    background: url(/_layouts/15/MOH/Internet/New/images/close_menu.png) no-repeat center center;
+#
     width: 40px;
     height: 23px;
     display: inline-block;
 }
 
 .footer_sec {
-    background-image: url(/_layouts/15/MOH/Internet/New/images/bgFooterGray_ar.jpg);
+#
     padding-top: 25px;
     padding-bottom: 25px;
     background-repeat: repeat-x;
@@ -7900,7 +7900,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 
     .ful li {
         padding: 3px 5px;
-        list-style-image: url("/_layouts/15/MOH/Internet/New/images/iconListFooter_ar.png");
+        list-style-image: url("#");
     }
 
     .ful .iconSVG img {
@@ -8738,7 +8738,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
     }
 
 .services[data-tabIndex="0"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_01.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -8746,7 +8746,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 }
 
 .services[data-tabIndex="1"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_02.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -8754,7 +8754,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 }
 
 .services[data-tabIndex="2"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_03.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -8762,7 +8762,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 }
 
 .services[data-tabIndex="3"] {
-    background: url(/_layouts/15/MOH/Internet/New/images/tab_bg_04.png) no-repeat;
+#
     background-size: cover;
     background-position: top left;
     background-attachment: fixed;
@@ -9287,7 +9287,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 .s4-breadcrumb-arrowcont {
     width: 9px;
     height: 25px;
-    background: url(/_layouts/15/MOH/Internet/New/images/bc_arrow.png) no-repeat center center;
+#
     position: relative;
     display: inline-block;
     bottom: 0;
@@ -9461,7 +9461,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
 .sm_conts {
     padding: 10px;
     border: 1px solid #ddd;
-    background: url(/_layouts/15/MOH/Internet/New/images/mc_bg.png) #fff no-repeat bottom left;
+#
     border-radius: 10px;
     background-size: auto 70%;
 }
@@ -10261,7 +10261,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
     position: absolute;
     bottom: 5px;
     left: 50%;
-    background: url(/_layouts/15/MOH/Internet/New/images/nal_c.png) no-repeat;
+#
     width: 32px;
     height: 32px;
     text-indent: -9999px;
@@ -10273,7 +10273,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
     position: absolute;
     bottom: 5px;
     right: 50%;
-    background: url(/_layouts/15/MOH/Internet/New/images/nar_c.png) no-repeat;
+#
     width: 32px;
     height: 32px;
     text-indent: -9999px;
@@ -10804,7 +10804,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
     height: 22px;
     margin: 0 0px 0 0;
     cursor: pointer;
-    background: url(/_layouts/15/MOH/Internet/New/images/fb_star_01.png) no-repeat;
+#
     margin-right: 5px;
     display: inline-block;
 }
@@ -10814,7 +10814,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
     height: 22px;
     margin: 0 0px 0 0;
     cursor: pointer;
-    background: url(/_layouts/15/MOH/Internet/New/images/fb_star_02.png) no-repeat;
+#
     margin-right: 5px;
     display: inline-block;
 }
@@ -10824,7 +10824,7 @@ input[type="button"], input[type="reset"], input[type="submit"], button {
     height: 22px;
     margin: 0 0px 0 0;
     cursor: pointer;
-    background: url(/_layouts/15/MOH/Internet/New/images/fb_star_02.png) no-repeat;
+#
     margin-right: 5px;
     display: inline-block;
 }
@@ -11402,7 +11402,7 @@ td.ms-advsrchText-v1 {
     .loader > div {
         width: 195px;
         height: 125px;
-        background: url(/_layouts/15/MOH/Internet/New/images/moh_loader.png) no-repeat;
+#
         margin: 40px auto;
         position: absolute;
         top: 0;
@@ -12431,14 +12431,14 @@ ul.newProj {
     }
 
     .boxCommentA .headerComment {
-        background-image: url(/_layouts/15/MOH/Internet/New/images/cerical.png);
+#
         background-repeat: no-repeat;
         padding-right: 50px;
         background-position: right;
     }
 
     .boxCommentA .footerrComment {
-        background-image: url(/_layouts/15/MOH/Internet/New/images/moh.png);
+#
         background-repeat: no-repeat;
         padding-right: 50px;
         margin-top: 8px;
@@ -13237,7 +13237,7 @@ input: -moz-placeholder {
 /* End Header */
 /* Start Footer */
 .footer_sec {
-    background-image: url(/_layouts/15/MOH/Internet/New/images/bgFooterGray_ar.jpg);
+#
     padding-top: 25px;
     padding-bottom: 25px;
     background-repeat: repeat-x;
@@ -13328,7 +13328,7 @@ input: -moz-placeholder {
 
     .ful li {
         padding: 3px 5px;
-        list-style-image: url("/_layouts/15/MOH/Internet/New/images/iconListFooter_ar.png");
+        list-style-image: url("#");
     }
 
     .ful .iconSVG img {
@@ -13980,7 +13980,7 @@ ul.sideMenuPickList li a img {
 
     .sideMenuPickList .dropdown-submenu.activedSubMenu::after {
         display: block;
-        content: url(/en/eServices/PublishingImages/lifehelpextention.png);
+#
         position: absolute;
         transform: scale(0.39, 0.39);
         left: 72px;
@@ -14278,7 +14278,7 @@ ul.subInnerMenuPanel li {
 /* End Eservices */
 /* Start Open Data */
 .sectionStatistics {
-    background-image: url(/_layouts/15/MOH/Internet/New/images/bgStatistics.png);
+#
     background-position: center center;
     background-repeat: no-repeat;
     min-height: 400px;

@@ -644,7 +644,7 @@ function GetViewHash(renderCtx) {
     return Nav.ajaxNavigate.getParam("InplviewHash" + (renderCtx.view.toLowerCase()).substring(1, renderCtx.view.length - 1));
 }
 function RenderAsyncDataLoad(renderCtx) {
-    return '<div style="padding-top:5px;"><center><img src="' + '/_layouts/15/images/gears_an.gif' + '" style="border-width:0px;" /></center></div>';
+    return '<div style="padding-top:5px;"><center><img src="' + '#' + '" style="border-width:0px;" /></center></div>';
 }
 function RenderCallbackFailures(renderCtx, reqResponseText, reqStatus) {
     if (!Boolean(renderCtx)) {

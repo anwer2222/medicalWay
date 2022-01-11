@@ -34,7 +34,7 @@ let body;
                 if (queue[i][0].toLowerCase() == 'init') {
                     let botFrame = document.getElementById("botFrameId");
                     botFrame.src = pluginURL + "widget/index/" + khawarizmiSDK.botId;
-                    document.getElementById("ownerLogoId").src = uiURL + "plugins/images/" + khawarizmiSDK.botId + ".png"
+                    document.getElementById("ownerLogoId").src = uiURL + "#" + khawarizmiSDK.botId + ".png"
 
                     botFrame.addEventListener("load", trackParentURL);
                 }
@@ -82,7 +82,7 @@ let body;
         if (!khawarizmiSDK.animatedIcon)
             imageName = "bot_"+khawarizmiSDK.botId+".svg";
 
-        var html = "<div id='showChatbotId' class='khaIcon' style='display:none'><img src='" + uiURL + "plugins/images/" + imageName + "'>";
+        var html = "<div id='showChatbotId' class='khaIcon' style='display:none'><img src='" + uiURL + "#" + imageName + "'>";
         if (khawarizmiSDK.animatedIcon)
             html +="<div id='botNameId'>\u0627\u0644\u062E\u0648\u0627\u0631\u0632\u0645\u064A<\/div>";
         html += "</div><div id=\"alkahwarizmi-chat-container\" style=\"display:none\"> <div id=\"alkahwarizmi-chat-container-header\" class=\"kha-heading\"><div class=\"alkhawarizmi-logo\">\r\n  <img src=" + uiURL + "logo.png  \/>\r\n            <button type=\"\" class=\"btn btn-success disabled\" id=\"incompleted\" style=\"display:none;width:110px; float: left;background-color: #147b0e; color: #0c5008;\">\r\n                <span style=\"color:#fff;\">\u0627\u0644\u0625\u0634\u0639\u0627\u0631\u0627\u062A<\/span>\r\n                <div id=\"bellId\" src=" + uiURL + "\plugins/images\/bel.png\" style=\"position: relative;left: -10px;\" \/>\r\n                <span class=\"badge\" id=\"nofProcessId\" style=\"display:none;background:#c00;position: relative;left: 18px;top: -1px;\">1<\/span>\r\n            <\/button>\r\n        <\/div>\r\n        <div class=\"minmize-icon\">\r\n            <a href=\"javascript:void(0)\" id=\"minmizeId\"><div id=\"bellId\"></div><\/a>\r\n        <\/div>\r\n        <div class=\"org-logo\">\r\n            <img id=\"ownerLogoId\" alt=\"\" \/>\r\n        <\/div>\r\n    <\/div>\r\n    <iframe id=\"botFrameId\" frameborder=\"0\" class=\"botframe\" allow=\"geolocation\" src=\"about:blank\" name=\"bc-window\" allowtransparency=\"true\" allowfullscreen=\"\" mozallowfullscreen=\"\" webkitallowfullscreen=\"\" allow=\"microphone; camera; autoplay\"><\/iframe>\r\n<\/div>";

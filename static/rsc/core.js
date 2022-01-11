@@ -1609,7 +1609,7 @@ function $_global_core() {
         removeNotification(nid);
     };
     SP.UI.Notify.showLoadingNotification = function(bSticky) {
-        var strHtml = "<img src='" + "/_layouts/15/images/loadingcirclests16.gif?rev=40" + "' style='vertical-align:bottom; display:inline-block; margin-" + (document.documentElement.dir == 'rtl' ? 'left' : 'right') + ":2px;' />&nbsp;<span style='vertical-align:top;'>" + STSHtmlEncode(Strings.STS.L_Loading_Text) + "</span>";
+        var strHtml = "<img src='" + "#" + "' style='vertical-align:bottom; display:inline-block; margin-" + (document.documentElement.dir == 'rtl' ? 'left' : 'right') + ":2px;' />&nbsp;<span style='vertical-align:top;'>" + STSHtmlEncode(Strings.STS.L_Loading_Text) + "</span>";
 
         return addNotification(strHtml, bSticky);
     };
@@ -2207,7 +2207,7 @@ function $_global_core() {
                 img.className = 'ms-imnImg';
                 img.title = '';
                 img.border = 0;
-                img.src = "/_layouts/15/images/blank.gif?rev=40";
+                img.src = "#";
                 img.alt = Strings.STS.L_NoPresenceInformation;
                 img.width = '12px';
                 img.height = '12px';
@@ -5876,14 +5876,14 @@ function _ExpGroupBy(formObj) {
     if (srcPath == expandSrcPath || imgName == 'plus.gif') {
         displayStr = "";
         if (imgName == 'plus.gif')
-            img.src = '/_layouts/15/images/minus.gif';
+            img.src = '#';
         else
             img.src = expandSrcPath;
     }
     else {
         displayStr = "none";
         if (imgName == 'minus.gif')
-            img.src = '/_layouts/15/images/plus.gif';
+            img.src = '#';
         else
             img.src = GetThemedImageUrl("commentcollapse12.png");
     }
@@ -5946,8 +5946,8 @@ function _ExpGroupBy(formObj) {
         if (childObj.id != null && childObj.id.substring(0, 8) == "footer" + ID)
             displayStr = displayStyle;
         if (displayStyle != "none" && childObj != img && childObj.tagName == "IMG" && childObj.src != null) {
-            var plusGif = '/_layouts/15/images/plus.gif';
-            var minisGif = '/_layouts/15/images/minus.gif';
+            var plusGif = '#';
+            var minisGif = '#';
 
             if (childObj.getAttribute('src') == expandSrcPath || childObj.src.slice(childObj.src.length - plusGif.length) == plusGif) {
                 displayStr = "none";
@@ -8304,14 +8304,14 @@ function UpdateAutoMode(tr) {
             if (c.innerHTML == "" && c.width == "1%") {
                 if (c.getAttribute("requiresCheckout") == null)
                     c.onclick = ClickToEdit;
-                AddAutoModeTag(c, tr, "/_layouts/15/images/edititem.gif?rev=40");
+                AddAutoModeTag(c, tr, "#");
             }
             else if (tr.cells.length > 1) {
                 c = tr.cells[1];
                 if (c.innerHTML == "" && c.width == "1%") {
                     if (c.getAttribute("requiresCheckout") == null)
                         c.onclick = ClickToEdit;
-                    AddAutoModeTag(c, tr, "/_layouts/15/images/edititem.gif?rev=40");
+                    AddAutoModeTag(c, tr, "#");
                 }
             }
         }
@@ -8328,7 +8328,7 @@ function ClickToEdit(evt) {
             var img = a.firstChild;
 
             if (img != null && img.tagName == "IMG")
-                img.src = "/_layouts/15/images/spinnyrefresh.gif?rev=40";
+                img.src = "#";
         }
     }
     if (window.event != null)
@@ -9745,7 +9745,7 @@ function DisplayCreateListDialog(callbackFunc) {
         var data = {
             createListControlId: c_createListControlId,
             progressBarId: c_progressBarId,
-            loadingCirlceImage: "/_layouts/15/images/loadingcirclests16.gif?rev=40",
+            loadingCirlceImage: "#",
             createButtonId: c_createButtonId,
             text_fileName: Encoding.HtmlEncode(Strings.STS.L_FileName_Text),
             text_requiredField: Encoding.HtmlEncode(Strings.STS.L_RequiredField_Tooltip),
@@ -14107,7 +14107,7 @@ function OnMouseOverAdHocFilterDeferCall(elm, fieldStr) {
         filterImageCell = titleRow.childNodes[titleRow.childNodes.length - 1];
         var filterArrow = filterImageCell.childNodes[0];
 
-        filterArrow.src = "/_layouts/15/images/menudark.gif?rev=40";
+        filterArrow.src = "#";
         filterArrow.alt = Strings.STS.L_OpenMenu_Text;
         filterArrow.style.visibility = "visible";
         if (IsElementRtl(filterTable)) {
@@ -14265,9 +14265,9 @@ function ToggleSelectionAllUsers(viewCounter) {
 
         if (img != null) {
             if (chkToggle.checked)
-                img.src = '/_layouts/15/images/checkall.gif';
+                img.src = '#';
             else
-                img.src = '/_layouts/15/images/unchecka.gif';
+                img.src = '#';
         }
     }
 }
@@ -14281,7 +14281,7 @@ function _UserSelectionOnClick(chk, viewCounter) {
             chkToggle.checked = false;
         }
         if (img != null) {
-            img.src = '/_layouts/15/images/unchecka.gif';
+            img.src = '#';
         }
     }
     else {
@@ -14299,7 +14299,7 @@ function _UserSelectionOnClick(chk, viewCounter) {
         }
         if (bAllChecked) {
             if (null != img)
-                img.src = '/_layouts/15/images/checkall.gif';
+                img.src = '#';
             if (null != chkToggle)
                 chkToggle.checked = true;
         }
@@ -14937,8 +14937,8 @@ function PrepContents(oMaster) {
         oMaster['_oContents'] = oContents;
         oContents.style.display = "none";
     }
-    oMaster['_wzMArrPath'] = "/_layouts/15/images/MArr.gif";
-    oMaster['_wzMArrPathRtL'] = "/_layouts/15/images/MArrRtL.gif";
+    oMaster['_wzMArrPath'] = "#";
+    oMaster['_wzMArrPathRtL'] = "#";
 }
 function FixUpMenuStructure(oMaster) {
     var oRoot = oMaster['_oRoot'];
@@ -19665,12 +19665,12 @@ var NewDocumentInfo;
 function InitializeNewDocumentInfo() {
     var docInfo = {};
 
-    docInfo[DocumentType.Word] = new DocumentInformation(DocumentType.Word, 'Word', "/_layouts/15/images/lg_icdocx.png?rev=40", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentWordImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentWord : "");
-    docInfo[DocumentType.Excel] = new DocumentInformation(DocumentType.Excel, 'Excel', "/_layouts/15/images/lg_icxlsx.png?rev=40", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcelImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcel : "");
-    docInfo[DocumentType.PowerPoint] = new DocumentInformation(DocumentType.PowerPoint, 'PowerPoint', "/_layouts/15/images/lg_icpptx.png?rev=40", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentPowerPointImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentPowerPoint : "");
-    docInfo[DocumentType.OneNote] = new DocumentInformation(DocumentType.OneNote, 'OneNote', "/_layouts/15/images/lg_icont.png?rev=40", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentOneNoteImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentOneNote : "");
-    docInfo[DocumentType.ExcelForm] = new DocumentInformation(DocumentType.ExcelForm, 'ExcelForm', "/_layouts/15/images/lg_icxlsx.png?rev=40", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcelFormImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcelForm : "");
-    docInfo[DocumentType.Folder] = new DocumentInformation(DocumentType.Folder, 'Folder', "/_layouts/15/images/mb_folder.png?rev=40", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentFolderImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentFolder : "");
+    docInfo[DocumentType.Word] = new DocumentInformation(DocumentType.Word, 'Word', "#", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentWordImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentWord : "");
+    docInfo[DocumentType.Excel] = new DocumentInformation(DocumentType.Excel, 'Excel', "#", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcelImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcel : "");
+    docInfo[DocumentType.PowerPoint] = new DocumentInformation(DocumentType.PowerPoint, 'PowerPoint', "#", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentPowerPointImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentPowerPoint : "");
+    docInfo[DocumentType.OneNote] = new DocumentInformation(DocumentType.OneNote, 'OneNote', "#", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentOneNoteImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentOneNote : "");
+    docInfo[DocumentType.ExcelForm] = new DocumentInformation(DocumentType.ExcelForm, 'ExcelForm', "#", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcelFormImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentExcelForm : "");
+    docInfo[DocumentType.Folder] = new DocumentInformation(DocumentType.Folder, 'Folder', "#", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentFolderImgAlt : "", typeof Strings != "undefined" ? Strings.STS.L_NewDocumentFolder : "");
     return docInfo;
 }
 function NewDocumentCallout_OnOpenedCallback(rCtx) {

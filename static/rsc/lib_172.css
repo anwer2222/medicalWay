@@ -69,7 +69,7 @@
 }
 
 .alkhawarizmi-logo  img{height:32px}
-#bellId {background-image: url(../images/closeMoh.png) !important;width: 14px;height: 14px;margin-top: 6px;}
+#bellId {background-image: !important;width: 14px;height: 14px;margin-top: 6px;}
 .minmize-icon{    margin-left: 5px;}
 .org-logo img{top:-6px !important;right: 0px;height: 40px !important;position: relative;}
 .botframe {width: 100%;height: calc(100% - 40px);overflow: hidden}

@@ -1382,7 +1382,7 @@ SP.Utilities.VersionUtility.getLayoutsPageUrl = function SP_Utilities_VersionUti
     return SP.Utilities.UrlBuilder.urlCombine(SP.PageContextInfo.get_webServerRelativeUrl(), '_layouts/15/' + pageName);
 };
 SP.Utilities.VersionUtility.getImageUrl = function SP_Utilities_VersionUtility$getImageUrl$st(imageName) {
-    return '/_layouts/15/images/' + imageName;
+    return '#' + imageName;
 };
 SP.HtmlBuilder.registerClass('SP.HtmlBuilder');
 SP.HtmlBuilder.Attribute.registerClass('SP.HtmlBuilder.Attribute');

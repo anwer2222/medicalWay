@@ -5536,13 +5536,13 @@ Srch.U.truncateEnd = function Srch_U$truncateEnd$st(original, maxChars) {
 }
 Srch.U.isDefaultSiteLogo = function Srch_U$isDefaultSiteLogo$st(logoUrl) {
     var $v_0 = false;
-    if (logoUrl.indexOf('/_layouts/images/titlegraphic.gif') !== -1) {
+    if (logoUrl.indexOf('#') !== -1) {
         $v_0 = true;
     }
-    else if (logoUrl.indexOf('/_layouts/images/siteicon.png') !== -1) {
+    else if (logoUrl.indexOf('#') !== -1) {
         $v_0 = true;
     }
-    else if (logoUrl.indexOf('/_layouts/15/images/siteIcon.png') !== -1) {
+    else if (logoUrl.indexOf('#') !== -1) {
         $v_0 = true;
     }
     return $v_0;

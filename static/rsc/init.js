@@ -6089,7 +6089,7 @@ function NotifyBrowserOfAsyncUpdate(container) {
         iframe.style.display = 'none';
         document.body.appendChild(iframe);
     }
-    iframe.contentWindow.location.replace('/_layouts/15/images/blank.gif');
+    iframe.contentWindow.location.replace('#');
 }
 function IsSafeHrefAlert(href, fAllowRelativeLinks) {
     if (href.match(new RegExp("^[^?]{257}")) != null) {
@@ -6672,10 +6672,10 @@ function EnsureSSImporter(byPassCookies) {
     return g_fSSImporter;
 }
 function GetThemedImageUrl(FileName) {
-    return GetThemedImageUrl_Core(FileName, '/_layouts/15/images/');
+    return GetThemedImageUrl_Core(FileName, '#');
 }
 function GetThemedLocalizedImageUrl(FileName) {
-    var localizedImagePath = "/_layouts/15/" + Strings.STS.L_Language_Text + "/images/";
+    var localizedImagePath = "/_layouts/15/" + Strings.STS.L_Language_Text + "#";
 
     return GetThemedImageUrl_Core(FileName, localizedImagePath);
 }
@@ -6845,7 +6845,7 @@ function ProcessPNGImages() {
 
             if (img != null && g_PNGImageSources[i] != null) {
                 img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + g_PNGImageSources[i] + "),sizingMethod=scale);";
-                img.src = "/_layouts/15/images/blank.gif?rev=40";
+                img.src = "#";
             }
         }
     }
@@ -7116,8 +7116,8 @@ function ExpCollGroup(groupName, imgName, evt, noAjax) {
     var collapseSpanClass = fRightToLeft ? "ms-commentcollapsertl-iconouter" : "ms-commentcollapse-iconouter";
     var expandImgClass = fRightToLeft ? "ms-commentexpandrtl-icon" : "ms-commentexpand-icon";
     var expandSpanClass = fRightToLeft ? "ms-commentexpandrtl-iconouter" : "ms-commentexpand-iconouter";
-    var oldExpandSrcPath = '/_layouts/15/images/plus.gif';
-    var oldCollapseSrcPath = '/_layouts/15/images/minus.gif';
+    var oldExpandSrcPath = '#';
+    var oldCollapseSrcPath = '#';
     var fOpen = false;
     var displayStr;
 
@@ -9525,7 +9525,7 @@ function IMNUpdateImage(id, imgInfo) {
         if (useFilter) {
             if (isPng) {
                 obj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + newImg + "),sizingMethod=scale,enabled=true);";
-                obj.src = "/_layouts/15/images/blank.gif?rev=40";
+                obj.src = "#";
             }
             else {
                 obj.style.filter = "";
@@ -10244,7 +10244,7 @@ function CreateSpinningWheelContainer() {
     spinningWheel.style.visibility = "hidden";
     var waitingImg = document.createElement("img");
 
-    waitingImg.src = "/_layouts/15/images/gears_anv4.gif?rev=40";
+    waitingImg.src = "#";
     spinningWheel.appendChild(waitingImg);
     return spinningWheel;
 }
@@ -10409,7 +10409,7 @@ function RegisterSharedHoverCardDependencies() {
     element.text = 'var slabManifest = {"boot":{"Types":["IBasePersonaViewModelFactory"],"Configurations":[{"type":"ReadPersonCardComponent"},{"type":"SharedHoverCardComponent"}]}};var st = new Date();var sver = 0';
     (document.getElementsByTagName('head'))[0].appendChild(element);
     element = document.createElement('script');
-    element.text = 'var serverSettings = {"version": "version","startTime": st,"cdnEndpoint": "","mapControlUrl": "","appDomainAppVirtualPath": "/owa","layout": "mouse","uiCulture": "en-US","uiTheme": "base","uiLang": "en","scriptsFolder": "' + layoutsRoot + '","resourcesFolder": "' + layoutsRoot + OwaRoot + 'resources","themedImagesFolderFormat": "' + layoutsRoot + OwaRoot + 'resources/themes/base/images/0","bootType": "SharedHoverCard","stylesLocale": "0","stylesFolderFormat": "' + layoutsRoot + OwaRoot + 'resources/themes/base/0"};';
+    element.text = 'var serverSettings = {"version": "version","startTime": st,"cdnEndpoint": "","mapControlUrl": "","appDomainAppVirtualPath": "/owa","layout": "mouse","uiCulture": "en-US","uiTheme": "base","uiLang": "en","scriptsFolder": "' + layoutsRoot + '","resourcesFolder": "' + layoutsRoot + OwaRoot + 'resources","themedImagesFolderFormat": "' + layoutsRoot + OwaRoot + '#","bootType": "SharedHoverCard","stylesLocale": "0","stylesFolderFormat": "' + layoutsRoot + OwaRoot + 'resources/themes/base/0"};';
     (document.getElementsByTagName('head'))[0].appendChild(element);
     EnsureScriptFunc(OwaSharedHoverCardJsKey, "SharedHoverCardShim", function() {
         EnsureScriptFunc(OwaSharedHoverCardStringsJsKey, "", function() {
@@ -10709,11 +10709,11 @@ function _spPreFetch() {
         window.setTimeout(function() {
             if (Boolean(document.images) && typeof _spPageContextInfo != "undefined" && typeof _spPageContextInfo.currentLanguage != "undefined") {
                 window.imgRibbon32x32 = new Image();
-                var imgUrl = "/_layouts/15/" + String(_spPageContextInfo.currentLanguage) + "/images/formatmap32x32.png";
+                var imgUrl = "/_layouts/15/" + String(_spPageContextInfo.currentLanguage) + "#";
 
                 window.imgRibbon32x32.src = GetImageUrlWithRevision(imgUrl);
                 window.imgRibbon16x16 = new Image();
-                imgUrl = "/_layouts/15/" + String(_spPageContextInfo.currentLanguage) + "/images/formatmap16x16.png";
+                imgUrl = "/_layouts/15/" + String(_spPageContextInfo.currentLanguage) + "#";
                 window.imgRibbon16x16.src = GetImageUrlWithRevision(imgUrl);
             }
         }, 0);
@@ -11565,7 +11565,7 @@ function _ribbonOnStartInit(ribbonInfo) {
 
             _elmBlankTab.id = "Ribbon.BlankTab";
             _elmBlankTab.className = "ms-cui-tabBody";
-            _elmBlankTab.innerHTML = "<span class=\"ms-ribbontabswitchloading\"><img src=\"" + "/_layouts/15/images/loadingcirclests16.gif?rev=40" + "\" alt=\"\"/><span>" + Strings.STS.L_Loading_Text + "</span></span>";
+            _elmBlankTab.innerHTML = "<span class=\"ms-ribbontabswitchloading\"><img src=\"" + "#" + "\" alt=\"\"/><span>" + Strings.STS.L_Loading_Text + "</span></span>";
             _elmTabCont.appendChild(_elmBlankTab);
             _elmRibbon.appendChild(_elmTabCont);
             AnimateRibbonMinimizedChanged(false);
@@ -11660,7 +11660,7 @@ function _createStatusMarkup(strTitle, strHtml, bWithBR, bIsVanilla, bIsDismissi
     rg.push(getStatusTitle(1) + Strings.STS.L_Status_Text);
     rg.push("</span>");
     if (!bIsVanilla) {
-        rg.push("<span class=\"ms-status-iconSpan\"><img class=\"ms-status-iconImg\" src=\"/_layouts/15/images/spcommon.png\" /></span>");
+        rg.push("<span class=\"ms-status-iconSpan\"><img class=\"ms-status-iconImg\" src=\"#" /></span>");
     }
     if (strTitle.length != 0) {
         rg.push("<span class=\"ms-bold ms-status-title\">");

@@ -240,11 +240,11 @@ $(document).ready(function () {
             //On Click
             $('.MiniHeaderTitle').click(function () {
                 if ($(this).parent().next().is(':hidden')) { //If immediate next container is closed...                                
-                    $(this).children('img.collabsable').attr('src', '/_Layouts/15/moh/eservices/images/icons/minus.gif');
+                    $(this).children('img.collabsable').attr('src', '#');
                     $(this).toggleClass('active').parent().next().slideDown(); //Add "active" state to clicked trigger and slide down the immediate next container
                 }
                 else {
-                    $(this).children('img.collabsable').attr('src', '/_Layouts/15/moh/eservices/images/icons/plus.gif');
+                    $(this).children('img.collabsable').attr('src', '#');
                     $(this).toggleClass('active').parent().next().slideUp();
                 }
 
@@ -493,7 +493,7 @@ function GetCuurentItemForMenu(){
 function BindImportantLinks(data, listName, containerId){
 	var html_content = '';
 	$.each(data,function(key,item){
-		var img = item.PublishingRollupImage != null ?$(item.PublishingRollupImage).attr('src'): "/_layouts/15/MOH/Internet/New/images/important_default.png";
+		var img = item.PublishingRollupImage != null ?$(item.PublishingRollupImage).attr('src'): "#";
 						
 		html_content +='<div><a href="'+ item.moh_Url +'" target="_blank" title="'+ item.Title +'"><img alt="'+ item.Title +'" src="'+ img +'" /><span>'+ item.Title +'</span></a></div>';
 	});
@@ -507,8 +507,8 @@ function BindImportantLinks(data, listName, containerId){
         autoplay: true,
         autoplaySpeed: 5000,
         mobileFirst: true,
-        nextArrow: '<img data-role="none" class="slick-prev" aria-label="previous" title="'+ $util.getLocalString("Next") +'" alt="'+ $util.getLocalString("Next") +'" src="/_layouts/15/MOH/Internet/New/images/f_arrow_l.png" />',
-        prevArrow: '<img data-role="none" class="slick-next" aria-label="next" title="'+ $util.getLocalString("Prev") +'" alt="'+ $util.getLocalString("Prev") +'" src="/_layouts/15/MOH/Internet/New/images/f_arrow_r.png" />',
+        nextArrow: '<img data-role="none" class="slick-prev" aria-label="previous" title="'+ $util.getLocalString("Next") +'" alt="'+ $util.getLocalString("Next") +'" src="#" />',
+        prevArrow: '<img data-role="none" class="slick-next" aria-label="next" title="'+ $util.getLocalString("Prev") +'" alt="'+ $util.getLocalString("Prev") +'" src="#" />',
         rtl: ($util.currentLang == 'ar') ? true : false
     });
 };
@@ -574,7 +574,7 @@ function BindLeftBlockSlider(data, listName, containerId){
 		var html_content = '';
 		$.each(data,function(key,item){
 			var url = listName + "/" + item.FileLeafRef;
-			var img = item.PublishingRollupImage != null ?$(item.PublishingRollupImage).attr('src'): "/_layouts/15/MOH/Internet/New/images/ls_default_img.png";
+			var img = item.PublishingRollupImage != null ?$(item.PublishingRollupImage).attr('src'): "#";
 			
 			if(url.toLowerCase() != window.location.pathname.toLowerCase()){
 				html_content +='<a href="'+ url +'">\
@@ -593,8 +593,8 @@ function BindLeftBlockSlider(data, listName, containerId){
 			autoplay: true,
 			autoplaySpeed: 5000,
 			mobileFirst: true,
-			nextArrow: '<img data-role="none" class="slick-prev" aria-label="previous" title="'+ $util.getLocalString("Next") +'" alt="'+ $util.getLocalString("Next") +'" src="/_layouts/15/MOH/Internet/New/images/f_arrow_l.png" />',
-			prevArrow: '<img data-role="none" class="slick-next" aria-label="next" title="'+ $util.getLocalString("Prev") +'" alt="'+ $util.getLocalString("Prev") +'" src="/_layouts/15/MOH/Internet/New/images/f_arrow_r.png" />',
+			nextArrow: '<img data-role="none" class="slick-prev" aria-label="previous" title="'+ $util.getLocalString("Next") +'" alt="'+ $util.getLocalString("Next") +'" src="#" />',
+			prevArrow: '<img data-role="none" class="slick-next" aria-label="next" title="'+ $util.getLocalString("Prev") +'" alt="'+ $util.getLocalString("Prev") +'" src="#" />',
 			rtl: ($util.currentLang == 'ar') ? true : false
 		});
 		
@@ -639,8 +639,8 @@ function GetPath(pageURL)	{
 }
 
 function ReplacePagerImages(){
-	$.each($("img[src*='/_Layouts/MOH/Internet/images/pager']"),function(key,item){
-		item.src.replace('/_Layouts/MOH/Internet/images/pager','/_Layouts/15/MOH/Internet/News/images/pager');
+	$.each($("img[src*='#']"),function(key,item){
+		item.src.replace('#','#');
 	})
 }
 
@@ -702,14 +702,14 @@ function PostComment(alertSuccessMessageText, alertRequiredMessageText) {
                 if (msg.d == 1) {
                     // slide comment panel up                               
                     $('#trCommmnetBody').slideUp(function() {
-                        $('img.CommentCollabsable').attr('src', '/_layouts/15/MOH/Internet/images/plus.gif');
+                        $('img.CommentCollabsable').attr('src', '#');
                         $('#result').html(ShowMessage(alertSuccessMessageText));
                     });
                 }
                 else {
                     // slide comment panel up                               
                     $('#trCommmnetBody').slideUp(function() {
-                        $('img.CommentCollabsable').attr('src', '/_layouts/15/MOH/Internet/images/plus.gif');
+                        $('img.CommentCollabsable').attr('src', '#');
                         $('#result').html(ShowMessage(alertSuccessMessageText));
                     });
                 }
@@ -717,7 +717,7 @@ function PostComment(alertSuccessMessageText, alertRequiredMessageText) {
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                 // slide comment panel up                               
                 $('#trCommmnetBody').slideUp(function() {
-                    $('img.CommentCollabsable').attr('src', '/_layouts/15/MOH/Internet/images/plus.gif');
+                    $('img.CommentCollabsable').attr('src', '#');
                     $('#result').html(ShowMessage(alertSuccessMessageText));
                 });
             }
@@ -743,10 +743,10 @@ function ClearCommentFields() {
 
 function ShowMessage(alertText) {
 	//<a class="close" href="javascript:void(0)">
-               // <img class="imgCloseMessage" id="imgCloseClearMessage" src="/_Layouts/15/moh/Internet/New/images/messages_close_btn.png"></a>
+               // <img class="imgCloseMessage" id="imgCloseClearMessage" src="#"></a>
     var txt ='<div class="msg">\
             <div class="clear_message">\
-                <img src="/_Layouts/15/moh/Internet/New/images/messages_yes_icon.png">'+alertText+'\
+                <img src="#">'+alertText+'\
             </div>\
     </div>';
 

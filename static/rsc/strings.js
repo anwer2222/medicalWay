@@ -83,7 +83,7 @@ Strings.CMS.L_InsertReusableTextToolTip_TEXT = "فتح نافذة جديدة ل�
 Strings.CMS.L_MergeCellBelowLabel_TEXT = "دمج مع الخلية السفلية";
 Strings.CMS.L_AssetLibraryCalloutKeywords = "كلمات المؤسسة الأساسية";
 Strings.CMS.L_ErrorMessageUserNotAuthenticatedAssets_TEXT = "‏‏يجب أن تكون مستخدماً معتمداً لتتمكن من تحديد الأصول من هذا الموقع.";
-Strings.CMS.L_APDPrevImgUrl = "/_layouts/images/next.gif";
+Strings.CMS.L_APDPrevImgUrl = "#";
 Strings.CMS.L_MergeCellAboveLabel_TEXT = "دمج مع الخلية العلوية";
 Strings.CMS.L_MergeCellLabel_TEXT = "دمج الخلية";
 Strings.CMS.L_ExpandedTagNameH1 = "العنوان 1";
@@ -100,7 +100,7 @@ Strings.CMS.L_AddHeadingSpecific_TEXT = "فتح نافذة جديدة لإنشا
 Strings.CMS.L_ExpandedTagNameLI = "عنصر قائمة";
 Strings.CMS.L_ExpandedTagNameTR = "صف جدول";
 Strings.CMS.slwpSortDialogWidth = "500px";
-Strings.CMS.L_APDNextImgUrl = "/_layouts/images/prev.gif";
+Strings.CMS.L_APDNextImgUrl = "#";
 Strings.CMS.L_CauseRedirect_TEXT = "‏‏سيؤدي هذا إلى إعادة التوجيه";
 Strings.CMS.L_Type_TEXT = "النوع:";
 Strings.CMS.L_ScriptAndEventHandlersRemoved_TEXT = "تم العثور على برنامج نصي ومعالجات أحداث مضمنة وإزالتها.  تأثر ### عنصر.";
