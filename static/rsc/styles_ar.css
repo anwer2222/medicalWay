@@ -5555,7 +5555,7 @@ strong {
 }
 
 .flaticon-age:before {
-    content: url(images/dinner.ico);
+    content: ;
 }
 
 .flaticon-scales:before {
@@ -11960,9 +11960,7 @@ strong {
     font-style: normal;
 }
 
-.flaticon-age:before {
-    content: url(images/dinner.ico);
-}
+
 
 .flaticon-scales:before {
     content: "\f101";
