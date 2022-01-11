@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+
+
+{% block styles %}
+{% include 'globel_css.html' %}
+{% endblock %}
+
+{% block extrastyles %}{% endblock %}
+
+{% block extrahead %}{% endblock %}
+
+{% block tracking %}
+  {# Default to using Google analytics #}
+  {# include "oscar/partials/google_analytics.html" #}
+{% endblock %}
+
+{% block header %}
+  {% include 'header.html' %}
+{% endblock %}
+
+
+{% block carousel %}
+<br>
+<br>
+<br>
+<div id="content-main">
+    <ul class="object-tools">
+      <li>
+          <a href={{ previous_month }}>
+              Previous month
+          </a>
+      </li>
+      <li>
+          <a href={{ next_month }}>
+              Next month
+          </a>
+      </li>
+  </ul>
+
+  {{ calendar }}
+{% endblock %}
+
+{% block features %}
+  {% include 'features.html' %}
+{% endblock %}
+
+{% block circles %}
+  {% include 'circles.html' %}
+{% endblock %}
+
+{% block footer %}
+  {% include 'footer.html' %}
+{% endblock %}
+
+{# Local scripts #}
+{% block scripts %}
+  {% include 'globel_js.html' %}
+{% endblock %}
+
+{# Additional JS scripts #}
+{% block extrascripts %}{% endblock %}
+

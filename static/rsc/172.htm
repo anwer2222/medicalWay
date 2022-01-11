@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" async="" src="172_data/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-w2lIrXdcsRgXIRsq1Y2C2rGrB0G3iE5CLYGxlFzUAbix3gGjUFYcQavOqddMOp1u"></script><script>
+        function loadBaseStyle() {
+            var baseCSSlink = document.createElement("link");
+            baseCSSlink.href = "/plugins/Content/style_base.css";
+            baseCSSlink.type = "text/css";
+            baseCSSlink.rel = "stylesheet";
+            document.getElementsByTagName("head")[0].appendChild(baseCSSlink);
+        }
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+
+    <link rel="stylesheet" href="172_data/style_172.css" onerror="loadBaseStyle()">
+    <script src="172_data/jquery-3.js"></script>
+    <script src="172_data/jquery.js"></script>
+    <script src="172_data/jquery_002.js"></script>
+    <script src="172_data/hubs"></script>
+    
+    <link rel="stylesheet" type="text/css" href="172_data/font-awesome.css">
+
+    <!-- required js-->
+    <script src="172_data/OpenLayers.js"></script>
+    <script src="172_data/maps-googleapis-com-maps-api.js"></script>
+    <!-- location picker plugin -->
+    <script src="172_data/location-picker.js"></script>
+    <style> 
+        .hidepage{
+            display:none;
+        }
+        #OpenLayers_Control_Attribution_10{bottom: 0.0em;}
+        .map-content{background-color:#f5f5f5;height: calc(100% - 52px);}
+        .map-footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 52px;
+            width: 100%;
+            background-color: #fff;
+            color: rgb(255, 255, 255);
+            padding: 5px;
+            margin: 0 !important;
+            z-index: 1000;
+            border: 2px solid #24242400 !important;
+            box-sizing: border-box;
+            box-shadow: 0px 2px 32px rgba(27, 49, 99, 0.15);
+        }
+        .map-button{
+           min-width: 60px;
+            float: right;
+            margin-right: 10px;
+            min-height: 36px;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+      	#map {     height: calc(100vh - 52px); width:100%;}
+      	.map-container {}
+          .map-img{width: 200px;
+                   height: 100px;}
+    </style>
+
+<script type="text/javascript" charset="UTF-8" src="172_data/common.js"></script><script type="text/javascript" charset="UTF-8" src="172_data/util.js"></script></head>
+
+<body>
+    <div class="convesation-size" id="chatbotModalId" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!-- Conversation - START -->
+        <div class="message" id="conversation" style="direction: rtl; overflow: hidden; outline: currentcolor none medium;" tabindex="1">
+            <div class="msg_block" id="msg_block"></div>
+            <!-- END msg stack -->
+            <div id="empty_block"></div>
+        </div>
+
+        <div class="reply" id="replaySectionId">
+            <div class="reply-recording" id="speechRecognationId">
+<img class="microphone mouse-pointer" id="startSpeechId" alt="" src="172_data/microphone_172.png" onerror="this.onerror = null; this.src = '/images/mic.svg';">
+
+                <img class="microphone mouse-pointer" id="stopSpeechId" alt="" src="172_data/g-voice.gif" style="display:none;background: rgb(191, 69, 0);height: 32px;width: 36px;">
+            </div>
+
+            <div class="reply-send" id="sendMessage">
+<img class="microphone mouse-pointer" alt="" src="172_data/send_172.png" onerror="this.onerror = null; this.src = '/images/send.svg';">
+
+            </div>
+            
+            <div class="pull-left " id="custServiceConnectId"><img src="172_data/employee.png"></div>
+           <!-- <div class="reply-send" id="mainMenuId">
+                <img class="microphone mouse-pointer" alt="" src="/images/menu.png" />
+            </div>-->
+            <div class="reply-tts">
+                <span class="tts-voice">Voice :</span>
+                <label class="kha-check-container" style="display: inline-block !important;margin-top:5px">
+                    <input type="checkbox" id="voiceCheckId">
+                    <span class="checkmark"> </span>
+                </label>
+            </div>
+            <div class="reply-main">
+                <textarea class="form-control utterance-editor" id="msg_input" placeholder="ادخل استفسارك هنا..." dir="rtl"></textarea>
+            </div>
+            <input id="userId" type="hidden" value="69622131">
+            <input id="chatbotId" type="hidden" value="172">
+            <input id="tokenId" type="hidden" value="eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtZXppYW50b3UiLCJleHAiOjE2NDE3OTEwMTcsImlzcyI6ImFzYXNFbHFhcmEtbGl2ZUNoYXQiLCJhdWQiOiI2OTYyMjEzMSJ9.uqPxZ7IMwacIVq375dYxG5YJ3FycQRf_-7AdCuCuXDY">
+        </div>
+    </div>
+    <div id="mapPageId" class="convesation-size hidepage">
+        <div class="map-content">
+          <!--  <img src="/bots-logo/map.jpg"/>-->
+            <div class="container">
+                <form role="form">
+                    <div class="location-picker">
+                        <div class="map-container">
+                            <div id="map" data-type="map"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="map-footer">
+            <button id="acceptMapId" class="map-button">موافق</button>
+            <button id="cancelMapId" class="map-button">إلغاء</button>
+        </div>
+        </div>
+    <div id="generalSurveyId" class="convesation-size hidepage">
+        <div class="survey-content">
+            <div>شكرا لإجرائك محادثة </div>
+            <div>نرجو أن نأخذ  لحظات من وقتك لاجراء  هذا الاستطلاع المختصر </div>
+        </div>
+        <div class="survey-footer">
+            <button id="submitSurvey">إرسال</button>
+        </div>
+     </div>
+    <div id="captchaPageId" class="convesation-size hidepage">
+            <div class="captcha-content">
+                <div>عذرا التصرف الذي تتبعه يعتبر مخالفا لسياسة الاستخدام، وقد تم حظرك لعدة دقائق... </div>
+            </div>
+        <div id="captchaSectionId">
+            <div class="captcha-form">
+                <div class="captcha-group">
+                    <label for="contact-form-name">الاسم:</label><br>
+                    <input type="text" name="name" id="contact-form-name" placeholder="الاسم" minlength="6" required="required" data-msg="Du musst dieses Feld ausfüllen">
+                </div>
+                <div class="captcha-group">
+                    <label for="contact-form-email">البريد الإلكتروني:</label><br>
+                    <input type="email" name="email" id="contact-form-email" placeholder="البريد الالكتروني" minlength="10" required="required" data-msg="Diese Email-Adresse ist ungültig">
+                </div>
+            </div>
+
+            <div class="g-recaptcha" data-sitekey="6LdRSecZAAAAAA48FrIJIKrF60naqoZ90SP06mY_"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="172_data/anchor.htm" role="presentation" name="a-atctz2otgp6b" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+
+            <div class="captcha-footer">
+                <button id="submitCaptchaId">إرسال</button>
+            </div>
+            <strong></strong>
+        </div>
+        <div id="timerSectionId" style="display:none">
+            <div>يمكنك التفاعل مع الشات بوت بعد <span id="time">10:00</span> دقائق!</div>
+        </div>
+    </div>
+
+      
+    
+
+    <script src="172_data/magicRating.js"></script>
+    <script src="172_data/alkhwarizmi.js"></script>
+    <script src="172_data/api.js"></script>
+
+    
+       
+
+    
+    
+<div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 5px; z-index: auto; background: rgba(20, 20, 20, 0) none repeat scroll 0% 0%; cursor: default; position: absolute; top: 0px; left: 0px; height: 0px; display: none;"><div style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(17, 175, 121); background-clip: padding-box; border-radius: 0px;" class="nicescroll-cursors"></div></div><div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr" style="height: 5px; z-index: auto; background: rgba(20, 20, 20, 0) none repeat scroll 0% 0%; top: -5px; left: 0px; position: absolute; cursor: default; display: none;"><div style="position: absolute; top: 0px; height: 5px; width: 0px; background-color: rgb(17, 175, 121); background-clip: padding-box; border-radius: 0px;" class="nicescroll-cursors"></div></div><div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: absolute; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255); overflow: hidden;"><iframe title="recaptcha challenge expires in two minutes" src="172_data/bframe.htm" style="width: 100%; height: 100%;" name="c-atctz2otgp6b" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" frameborder="0"></iframe></div></div></body></html>

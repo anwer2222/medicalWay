@@ -1,0 +1,98 @@
+[
+    {
+      "model": "core.Client",
+      "id": 2,
+      "fields": {
+        "category" : "HM",
+        "photo" : "static/photo/doctor1.jpg",
+        "username" : "Yaser",
+        "password" : "pw1111",
+        "first_name" : "Yaser",
+        "last_name" : "Abid"
+      }
+    },
+    {
+        "model": "core.Profile",
+        "pk": 1,
+        "fields": {
+          "user" : "1",
+          "stripe_customer_id" : "76768769868769",
+          "is_valied" : "True"
+        }
+    },
+    {
+        "model": "core.Contact",
+        "pk": 1,
+        "fields": {
+          "user" : "1",
+          "number" : "767687698",
+          "category" : "M",
+          "default" : "True"
+        }
+    },
+    {
+        "model": "core.Address",
+        "pk": 1,
+        "fields": {
+          "user" : "1",
+          "apartment" : "767",
+          "street" : "King Abdual Aziz st",
+          "city" : "RI",
+          "province" : "RI",
+          "country" : "SA",
+          "postal_code" : "98809",
+          "address_type" : "H",
+          "default" : "True"
+        }
+    },
+    {
+        "model": "doctor.Doctor",
+        "fields": {
+          "category" : "FM",
+          "sex" : "F",
+          "photo" : "static/photo/doctor2.jpg",
+          "username" : "Maha01",
+          "password" : "pw1111",
+          "first_name" : "Maha",
+          "last_name" : "Umar"
+      }
+    },
+    {
+        "model": "pharma.Pharma",
+        "fields": {
+          "category" : "FM",
+          "sex" : "F",
+          "photo" : "static/photo/doctor2.jpg",
+          "username" : "Asma01",
+          "password" : "pw1111",
+          "first_name" : "Asma",
+          "last_name" : "Umar"
+      }
+    },
+    {
+        "model": "patient.Patient",
+        "fields": {
+          "job_title" : "Buisness man",
+          "admission" : "FM",
+          "username" : "Jaber01",
+          "password" : "pw1111",
+          "first_name" : "Jabr",
+          "last_name" : "Hammed"
+      }
+    },
+    {
+        "model": "patient.medicalProfile",
+        "pk": 1,
+        "fields": {
+          "pateint" : "1",
+          "file_id" : "B5656758",
+          "age" : "58",
+          "sex" : "M",
+          "medical_history" : "medical_history",
+          "family_history" : "family_history",
+          "complain" : "complain",
+          "medison" : "medison",
+          "allergy" : "allergy"
+      }
+    }
+  ]
