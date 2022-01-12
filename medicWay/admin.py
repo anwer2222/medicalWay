@@ -8,7 +8,7 @@ from patient.admin import Patient, medicalProfile
 from table.admin import Event, EventAdmin
 from biosignal.models import  HartRate
 from finance.models import Pay
-from diagnois.models import Condition
+from diagnois.models import Disease
 # from core.admin import Text,Image,UserProfile,Contact,Address
 # from product.admin import Item,OrderItem,Order
 # from finance.admin import Payment,Coupon,Refund
@@ -22,7 +22,7 @@ class MyAdminSite(admin.AdminSite):
 
 
 admin_site = MyAdminSite(name='myadmin')
-app_list=core_list+[Group ,User, Doctor, Pharma, Analyst, Patient, medicalProfile, HartRate, Condition, Pay]
+app_list=core_list+[Group ,User, Doctor, Pharma, Analyst, Patient, medicalProfile, HartRate, Disease, Pay]
 
 # l=locals()
 # r={i:l for i in l if "ModelBase" in str(type(l[i]))}
