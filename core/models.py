@@ -107,7 +107,8 @@ class Client(User):
     ]
     category = models.CharField(max_length= 2, choices= CLIENT_CHOICES, default= 'OT')
     photo = models.ImageField(upload_to='static/photo/',blank=True, null=True)
-
+    o=TextManager()
+    
     class Meta:
         verbose_name = 'Clinet'
         verbose_name_plural = 'Clinets'
