@@ -55,10 +55,10 @@ class Event(models.Model):
  
         return overlap
  
-    def get_absolute_url(self):
-        return reverse("table:event", kwargs={
-            't_id': self.id
-        })
+    # def get_absolute_url(self):
+    #     return reverse("table:event", kwargs={
+    #         't_id': self.id
+    #     })
  
     def clean(self):
         if self.end_time <= self.start_time:

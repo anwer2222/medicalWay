@@ -2,6 +2,7 @@ from django.contrib import admin
 from .admin import admin_site
 from django.urls import include, path
 # from .views import home, cart, checkout, shop, about, gallery, contact
+# from .views import *
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
@@ -17,7 +18,7 @@ urlpatterns = [
     # path('p/', include('pharma.urls')),
     # path('a/', include('analyst.urls')),
     # path('f/', include('finance.urls')),
-    # path('t/', include('table.urls')),
+    # path('t/', include('table.urls'),name='table'),
     # path('i/', include('diagnois.urls')),
     # path('b/', include('biosignal.urls')),
     path('admin/', admin_site.urls),

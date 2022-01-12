@@ -15,7 +15,7 @@ class EventCalendar(HTMLCalendar):
         events_from_day = events.filter(day__day=day)
         events_html = "<ul>"
         for event in events_from_day:
-            events_html += event.get_absolute_url() + "<br>"
+            events_html += "🕒 "+event.assgnied_for.__str__() + "<br>"
         events_html += "</ul>"
  
         if day == 0:
