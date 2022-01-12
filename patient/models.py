@@ -45,5 +45,5 @@ class medicalProfile(models.Model):
 
     o=models.Manager()
     def __str__(self):
-        return self.pateint
+        return self.pateint.__str__()
     
