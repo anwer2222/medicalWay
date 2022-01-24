@@ -1,4 +1,4 @@
-var CookieColorKeyName = $util.currentLang +'MOhColorSelectedValue';
+var CookieColorKeyName ='MOhColorSelectedValue';
 //get Corona News
 	//GetListItems($util.LangUrl + "/Lists/CoronaUpdates", "Home", Bindcorona, "dd/MMM/yyyy","");
 	

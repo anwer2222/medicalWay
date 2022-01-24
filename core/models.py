@@ -5,6 +5,7 @@ from django.core.validators import RegexValidator
 # from django_countries.fields import 
 # from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
 
 default_home={'t1':"Title of a longer featured blog post",
     'c1':"Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.",
@@ -38,15 +39,18 @@ default_home={'t1':"Title of a longer featured blog post",
         }
 
 class Image(models.Model):
-    title = models.CharField(max_length= 100, blank=True, null=True)
-    url= models.CharField(max_length= 100, blank=True, null=True)
+    title = models.CharField(_('title'),max_length= 100, blank=True, null=True)
+    url= models.CharField(_('url'),max_length= 100, blank=True, null=True)
     text = models.ForeignKey(
         'Text', on_delete=models.SET_NULL, blank=True, null=True)
-    file = models.ImageField(upload_to='static/img/',blank=True, null=True)
+    file = models.ImageField(_('file'),upload_to='static/img/',blank=True, null=True)
     o=models.Manager()
 
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name = _('image')
+        verbose_name_plural = _('images')
 
 class TextManager(models.Manager):
     def get_home(self):
@@ -96,6 +100,10 @@ class Text(models.Model):
         elif len(sp)>2:
             return html % (' '.join(sp[:2]),' '.join(sp[2:]))
 
+    class Meta:
+        verbose_name = _('text')
+        verbose_name_plural = _('text')
+
 
 class Client(User):
     CLIENT_CHOICES =[
@@ -110,8 +118,8 @@ class Client(User):
     o=TextManager()
 
     class Meta:
-        verbose_name = 'Clinet'
-        verbose_name_plural = 'Clinets'
+        verbose_name = _('Clinet')
+        verbose_name_plural = _('Clinets')
 
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True,null=True)
@@ -120,6 +128,10 @@ class Profile(models.Model):
     o=models.Manager()
     def __str__(self):
         return self.user
+
+    class Meta:
+        verbose_name = _('profile')
+        verbose_name_plural = _('profiles')
     
 
 class Contact(models.Model):
@@ -137,6 +149,9 @@ class Contact(models.Model):
     o=models.Manager()
     def __str__(self):
         return self.user
+    class Meta:
+        verbose_name = _('contact')
+        verbose_name_plural = _('contact')
 
 class AddrManager(models.Manager):
     def dic2obj(self,dic):
@@ -212,6 +227,7 @@ class Address(models.Model):
         return "%s %s, %s" % (self.apartment, self.street, self.get_city_display())
 
     class Meta:
-        verbose_name_plural = 'Addresses'
+        verbose_name = _('address')
+        verbose_name_plural = _('Addresses')
 
 

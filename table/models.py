@@ -2,47 +2,48 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.shortcuts import reverse
 from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
 
 
 class Event(models.Model):
 
     CATEGORY_CHOICES = (
-        ('H', 'Hospital'),   
-        ('M', 'Meeting'),   
-        ('D', 'Doctor'),
-        ('P', 'Pharmacy'),
-        ('A', 'Analyst'),
-        ('O', 'Other'),   
+        ('H', _('Hospital')),   
+        ('M', _('Meeting')),   
+        ('D', _('Doctor')),
+        ('P', _('Pharmacy')),
+        ('A', _('Analyst')),
+        ('O', _('Other')), 
     )
 
     STATUS_CHOICES = (
-        ('A', 'Approved'),
-        ('H', 'Hold'),
-        ('D', 'Declined'),
-        ('R', 'Archived'),
+        ('A', _('Approved')),
+        ('H', _('Hold')),
+        ('D', _('Declined')),
+        ('R', _('Archived')),
     )
 
     AVAILABILITY_CHOICES = (
-        ('O', 'off-work'),
-        ('F', 'free'),
-        ('B', 'busy'),
+        ('O', _('off-work')),
+        ('F', _('free')),
+        ('B', _('busy')),
     )
 
-    day = models.DateField(u'Day of the event', help_text=u'Day of the event')
-    start_time = models.TimeField(u'Starting time', help_text=u'Starting time')
-    end_time = models.TimeField(u'Final time', help_text=u'Final time')
-    notes = models.TextField(u'Notes', help_text=u'Textual Notes', blank=True, null=True)
-    category = models.CharField(choices=CATEGORY_CHOICES, max_length=1, default='H', help_text=u'Booking an appointment for')
-    status = models.CharField(choices=STATUS_CHOICES, max_length=1, default='H')
-    availability = models.CharField(choices=AVAILABILITY_CHOICES, max_length=1, default='B')
-    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='created_by')
-    assgnied_for = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,related_name='assigned_for',help_text='the doctor responsible for the appointment')
-    assgnied_to = models.ManyToManyField(User, related_name='assigned_to',help_text='the patient(s) attending the appointment')
+    day = models.DateField(_('Day of the event'), help_text=_('Day of the event'))
+    start_time = models.TimeField(_('Starting time'), help_text=_('Starting time'))
+    end_time = models.TimeField(_('Final time'), help_text=_('Final time'))
+    notes = models.TextField(_('Notes'), help_text=_('Textual Notes'), blank=True, null=True)
+    category = models.CharField(_('category'),choices=CATEGORY_CHOICES, max_length=1, default='H', help_text=_('Booking an appointment for'))
+    status = models.CharField(_('status'),choices=STATUS_CHOICES, max_length=1, default='H')
+    availability = models.CharField(_('availability'),choices=AVAILABILITY_CHOICES, max_length=1, default='B')
+    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='created_by',verbose_name=_('created at'))
+    assgnied_for = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,related_name='assigned_for',help_text=_('the doctor responsible for the appointment'),verbose_name=_('assgnied for'))
+    assgnied_to = models.ManyToManyField(User, related_name='assigned_to',help_text=_('the patient(s) attending the appointment'),verbose_name=_('assgnied to'))
     o=models.Manager()
     
     class Meta:
-        verbose_name = u'Scheduling'
-        verbose_name_plural = u'Schedules'
+        verbose_name = _('event')
+        verbose_name_plural = _('events')
  
     def check_overlap(self, fixed_start, fixed_end, new_start, new_end):
         overlap = False

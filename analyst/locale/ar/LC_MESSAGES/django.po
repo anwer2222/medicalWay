@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-24 18:53-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: analyst/apps.py:8 analyst/models.py:36
+msgid "analyst"
+msgstr "اخصائي تشخيص-اشعة"
+
+#: analyst/models.py:10
+msgid "General"
+msgstr "عام"
+
+#: analyst/models.py:11
+msgid "Abdominal"
+msgstr "باطنية"
+
+#: analyst/models.py:12
+msgid "Breast imaging"
+msgstr "اشعة صدر"
+
+#: analyst/models.py:13
+msgid "Cardiovascular"
+msgstr "اشعة قلب"
+
+#: analyst/models.py:14
+msgid "Chest"
+msgstr "صدر"
+
+#: analyst/models.py:15
+msgid "Emergency"
+msgstr "طوارئ"
+
+#: analyst/models.py:16
+msgid "Head and neck"
+msgstr "راس و رقبة"
+
+#: analyst/models.py:17
+msgid "Interventional"
+msgstr "الوقائي"
+
+#: analyst/models.py:18
+msgid "Musculoskeletal"
+msgstr "عظام"
+
+#: analyst/models.py:19
+msgid "Neuroradiology"
+msgstr "اعصاب"
+
+#: analyst/models.py:20
+msgid "Nuclear"
+msgstr "نووي"
+
+#: analyst/models.py:21
+msgid "Pediatric"
+msgstr ""
+
+#: analyst/models.py:22
+msgid "Radiation oncology"
+msgstr ""
+
+#: analyst/models.py:23
+msgid "Vascular"
+msgstr ""
+
+#: analyst/models.py:24
+msgid "Other"
+msgstr "أخرى"
+
+#: analyst/models.py:27
+msgid "Male"
+msgstr "ذكر"
+
+#: analyst/models.py:28
+msgid "Female"
+msgstr "انثى"
+
+#: analyst/models.py:31
+msgid "sex"
+msgstr "الجنس"
+
+#: analyst/models.py:32
+msgid "category"
+msgstr "التخصص"
+
+#: analyst/models.py:33
+msgid "photo"
+msgstr "صوره"
+
+#: analyst/models.py:37
+msgid "analysts"
+msgstr "اخصائي تشخيص-اشعة"

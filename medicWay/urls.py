@@ -2,11 +2,12 @@ from django.contrib import admin
 from .admin import admin_site
 from django.urls import include, path
 # from .views import home, cart, checkout, shop, about, gallery, contact
-# from .views import *
+from .views import Home
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path('',TemplateView.as_view(template_name='pub/home.htm'), name='home'),
+    # path('',TemplateView.as_view(template_name='pub/home.htm'), name='home'),
+    path('',Home.as_view(), name='home'),
     # path('about/', about.as_view()),
     # path('gallery/', gallery.as_view()),
     # path('contact/', contact.as_view()),

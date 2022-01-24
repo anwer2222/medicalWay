@@ -9,6 +9,7 @@ from table.admin import Event, EventAdmin
 from biosignal.models import  HartRate
 from finance.models import Pay
 from diagnois.models import Disease
+from django.utils.translation import gettext_lazy as _
 # from core.admin import Text,Image,UserProfile,Contact,Address
 # from product.admin import Item,OrderItem,Order
 # from finance.admin import Payment,Coupon,Refund
@@ -16,8 +17,8 @@ from diagnois.models import Disease
 
 class MyAdminSite(admin.AdminSite):
     default_site = 'myproject.admin.MyAdminSite'
-    site_header = 'Medical Way'
-    site_title = 'Medical Way'
+    site_header = "منصة شخْص"#_('Medical Way')
+    site_title = "منصة شخْص"#_('Medical Way')
     view_on_site = True
 
 

@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-24 18:53-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: table/apps.py:7
+msgid "Schedule"
+msgstr "جدول"
+
+#: table/apps.py:8
+msgid "Schedules"
+msgstr "جدولة"
+
+#: table/models.py:11
+msgid "Hospital"
+msgstr "المستشفى"
+
+#: table/models.py:12
+msgid "Meeting"
+msgstr "اجتماع"
+
+#: table/models.py:13
+msgid "Doctor"
+msgstr "طبيب"
+
+#: table/models.py:14
+msgid "Pharmacy"
+msgstr "صيدلي"
+
+#: table/models.py:15
+msgid "Analyst"
+msgstr "اخصائي اشعة"
+
+#: table/models.py:16
+msgid "Other"
+msgstr "أخرى"
+
+#: table/models.py:20
+msgid "Approved"
+msgstr "مأكد"
+
+#: table/models.py:21
+msgid "Hold"
+msgstr "إنتظار"
+
+#: table/models.py:22
+msgid "Declined"
+msgstr "ملغي"
+
+#: table/models.py:23
+msgid "Archived"
+msgstr "ارشيف"
+
+#: table/models.py:27
+msgid "off-work"
+msgstr "إجازة"
+
+#: table/models.py:28
+msgid "free"
+msgstr "متاح"
+
+#: table/models.py:29
+msgid "busy"
+msgstr "مشغول"
+
+#: table/models.py:32
+msgid "Day of the event"
+msgstr "يوم الاجتماع"
+
+#: table/models.py:33
+msgid "Starting time"
+msgstr "وقت البدء"
+
+#: table/models.py:34
+msgid "Final time"
+msgstr "وقت الانتهاء"
+
+#: table/models.py:35
+msgid "Notes"
+msgstr "ملاحظة"
+
+#: table/models.py:35
+msgid "Textual Notes"
+msgstr "ملاحظة نصية"
+
+#: table/models.py:36
+msgid "category"
+msgstr "التصنيف"
+
+#: table/models.py:36
+msgid "Booking an appointment for"
+msgstr "سبب حجز الموعد"
+
+#: table/models.py:37
+msgid "status"
+msgstr "الحاله"
+
+#: table/models.py:38
+msgid "availability"
+msgstr "متاح"
+
+#: table/models.py:39
+msgid "created at"
+msgstr "تاريخ الانشاء"
+
+#: table/models.py:40
+msgid "the doctor responsible for the appointment"
+msgstr "الطبيب المسؤول عن الموعد"
+
+#: table/models.py:40
+msgid "assgnied for"
+msgstr "الطبيب المكلف"
+
+#: table/models.py:41
+msgid "the patient(s) attending the appointment"
+msgstr "المريض حاضرالموعد"
+
+#: table/models.py:41
+msgid "assgnied to"
+msgstr "صاحب الموعد"
+
+#: table/models.py:45
+msgid "event"
+msgstr "اجتماع"
+
+#: table/models.py:46
+msgid "events"
+msgstr "الاجتماعات"

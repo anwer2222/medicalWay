@@ -173,3 +173,6 @@ python manage.py loaddata core/fixtures.json
 ```
 #### referance:
 * https://docs.djangoproject.com/en/3.1/howto/initial-data/
+
+django-admin makemessages -l ar
+django-admin compilemessages

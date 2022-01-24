@@ -1,35 +1,35 @@
 from django.db import models
-from django.conf import settings
-from django.db.models.signals import post_save
-from core.models import User, Profile as coreProfile
+from django.utils.translation import gettext_lazy as _
+# from django.conf import settings
+# from django.db.models.signals import post_save
+from core.models import User #, Profile as coreProfile
 
 
 class Pharma(User):
     PHARMA_CHOICES =[
-        ('GE','General'),
-        ('CO','Community'),
-        ('SP','Specialty'),
-        ('AM','Ambulatory'),
-        ('MI','Military'),
-        ('IN','Informatic'),
-        ('HO','Hospital'),
-        ('NU','Nuclear'),
-        ('HC','Home care'),
-        ('OT','Other'),
+        ('GE',_('General')),
+        ('CO',_('Community')),
+        ('SP',_('Specialty')),
+        ('AM',_('Ambulatory')),
+        ('IN',_('Informatic')),
+        ('HO',_('Hospital')),
+        ('NU',_('Nuclear')),
+        ('HC',_('Home care')),
+        ('OT',_('Other')),
     ]
     SEX_CHOICES =[
-        ('M','Male'),
-        ('F','Female'),
+        ('M',_('Male')),
+        ('F',_('Female')),
     ]
     
-    sex= models.CharField(max_length=1,choices=SEX_CHOICES)
-    category = models.CharField(max_length= 2, choices= PHARMA_CHOICES, default= 'OT')
-    photo = models.ImageField(upload_to='static/photo/',blank=True, null=True)
+    sex= models.CharField(_('sex'),max_length=1,choices=SEX_CHOICES)
+    category = models.CharField(_('category'),max_length= 2, choices= PHARMA_CHOICES, default= 'OT')
+    photo = models.ImageField(_('photo'),upload_to='static/photo/',blank=True, null=True)
 
     o=models.Manager()
     class Meta:
-        verbose_name = 'pharmacist'
-        verbose_name_plural = 'pharmacists'
+        verbose_name = _('pharmacist')
+        verbose_name_plural = _('pharmacists')
 
 # class Profile(coreProfile):
 #     user = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True,null=True)

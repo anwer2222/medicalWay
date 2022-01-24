@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-24 18:53-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: pharma/apps.py:8 pharma/models.py:31
+msgid "pharmacist"
+msgstr "صيدلي"
+
+#: pharma/apps.py:9 pharma/models.py:32
+msgid "pharmacists"
+msgstr "الصيدلة"
+
+#: pharma/models.py:10
+msgid "General"
+msgstr "عام"
+
+#: pharma/models.py:11
+msgid "Community"
+msgstr "المجتمع"
+
+#: pharma/models.py:12
+msgid "Specialty"
+msgstr "التخصص"
+
+#: pharma/models.py:13
+msgid "Ambulatory"
+msgstr ""
+
+#: pharma/models.py:14
+msgid "Informatic"
+msgstr "المعلومات"
+
+#: pharma/models.py:15
+msgid "Hospital"
+msgstr "مستشفى"
+
+#: pharma/models.py:16
+msgid "Nuclear"
+msgstr "نووي"
+
+#: pharma/models.py:17
+msgid "Home care"
+msgstr "منزل"
+
+#: pharma/models.py:18
+msgid "Other"
+msgstr "أخرى"
+
+#: pharma/models.py:21
+msgid "Male"
+msgstr "ذكر"
+
+#: pharma/models.py:22
+msgid "Female"
+msgstr "انثى"
+
+#: pharma/models.py:25
+msgid "sex"
+msgstr "الجنس"
+
+#: pharma/models.py:26
+msgid "category"
+msgstr "التخصص"
+
+#: pharma/models.py:27
+msgid "photo"
+msgstr "صوره"
